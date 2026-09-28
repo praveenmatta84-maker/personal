@@ -1,0 +1,8 @@
+{
+  "name": "ZenRoutine - AI Daily Goal & Slot Flow Tracker",
+  "description": "A peaceful routine and task progress tracker with smart slot scheduling, integrated personal notebook, document reader with bookmark resume, streak tracker, and AI schedule assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

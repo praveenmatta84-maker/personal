@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+@keyframes orangeFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-orange-flow {
+  background: linear-gradient(135deg, #ea580c 0%, #f97316 25%, #fb923c 50%, #ea580c 75%, #c2410c 100%);
+  background-size: 300% 300%;
+  animation: orangeFlow 16s ease infinite;
+}
+
+.bg-orange-flow-soft {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 35%, #ffedd5 70%, #fff7ed 100%);
+  background-size: 200% 200%;
+  animation: orangeFlow 20s ease infinite;
+}
+
+.bg-orange-mesh {
+  background: radial-gradient(circle at 20% 20%, rgba(251, 146, 60, 0.45) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(234, 88, 12, 0.5) 0%, transparent 60%),
+              radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.35) 0%, transparent 70%);
+}
+
+.bg-orange-mesh-subtle {
+  background: radial-gradient(circle at 10% 10%, rgba(251, 146, 60, 0.2) 0%, transparent 40%),
+              radial-gradient(circle at 90% 90%, rgba(234, 88, 12, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 50% 40%, rgba(253, 186, 116, 0.15) 0%, transparent 60%);
+}
+
+.card-glass-white {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(234, 88, 12, 0.08), 0 4px 12px -2px rgba(234, 88, 12, 0.04);
+}
+
+/* Custom serene subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(234, 88, 12, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(234, 88, 12, 0.4);
+}
